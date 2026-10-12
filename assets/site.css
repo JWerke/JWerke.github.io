@@ -85,6 +85,9 @@ section { padding-top: 36px; margin-top: 36px; border-top: 1px solid var(--rule)
 section h2 { display: flex; gap: 0.5em; margin: 0 0 12px; color: var(--text); font-size: 1.1875rem; line-height: 1.4; font-weight: 700; letter-spacing: -0.01em; }
 section h2 .num { flex: 0 0 auto; color: var(--accent); font-variant-numeric: tabular-nums; }
 p { margin: 0 0 14px; }
+section ul { margin: 0 0 14px; padding-left: 1.25em; }
+section li { margin: 6px 0; padding-left: 0.25em; }
+section li::marker { color: var(--accent); }
 p:last-child { margin-bottom: 0; }
 
 .contact-card { margin-top: 48px; padding: 22px 24px; border-radius: 14px; background: var(--surface); border: 1px solid var(--rule); }
