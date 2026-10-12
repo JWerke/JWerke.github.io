@@ -10,7 +10,8 @@ No app code lives here.
 The policy's text is the "No Tracking" privacy policy from the open-source
 [App Privacy Policy Generator](https://app-privacy-policy-generator.nisrulz.com/)
 ([source](https://github.com/nisrulz/app-privacy-policy-generator)), for a mobile app, with its
-template fields filled in. It is unchanged otherwise.
+template fields filled in. It is unchanged otherwise, apart from one added section, "Your photos and
+projects", written by the developer.
 
 ## Publishing
 
