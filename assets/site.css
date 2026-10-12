@@ -48,6 +48,8 @@ body {
 }
 body > main { flex: 1 0 auto; width: 100%; }
 a { color: var(--accent); text-underline-offset: 3px; }
+/* Contact details: the decoy inside them (see contact.js) never shows */
+.pc-x { display: none !important; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
 /* Header: the app's mark and name */
@@ -64,7 +66,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 .site-header .section { color: var(--muted); font-size: 0.875rem; font-weight: 600; }
 
 /* Page layout: contents beside the text on wide screens, above it on narrow ones */
-.page { max-width: 1080px; margin: 0 auto; padding: 56px 24px 80px; display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 64px; }
+.page { max-width: 1080px; margin: 0 auto; padding: 56px 24px 80px; display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 64px; align-content: start; }
 .page > .hero { grid-column: 1 / -1; }
 .hero .eyebrow { margin: 0 0 10px; color: var(--accent); font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 .hero h1 { margin: 0; color: var(--text); font-size: 2.75rem; line-height: 1.1; font-weight: 900; letter-spacing: -0.03em; }
@@ -96,6 +98,13 @@ p:last-child { margin-bottom: 0; }
 .contact-card .who { margin: 0; color: var(--muted); font-size: 0.9375rem; }
 .contact-card .mail { display: inline-block; margin-top: 2px; font-weight: 600; overflow-wrap: anywhere; }
 .attribution { margin-top: 24px; color: var(--muted); font-size: 0.8125rem; line-height: 1.6; text-wrap: balance; }
+
+/* A short page without contents (the Impressum): one column */
+.page-single { grid-template-columns: minmax(0, 1fr); row-gap: 40px; }
+.page-single > article { max-width: 680px; }
+.imprint section { margin-top: 32px; }
+.imprint section:first-child { margin-top: 0; }
+.imprint p { line-height: 1.8; }
 
 /* Footer: the maker's mark */
 .site-footer { border-top: 1px solid var(--rule); }
