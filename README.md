@@ -7,12 +7,10 @@ The text is the "No Tracking" privacy policy from the open-source
 ([source](https://github.com/nisrulz/app-privacy-policy-generator)), for a mobile app, with its
 template fields filled in. It is unchanged otherwise.
 
-## Before publishing
+## Publishing
 
-Replace the highlighted placeholder in `index.html`:
+Make the repository public (or use a plan that allows Pages on private repositories), then turn on
+Pages under Settings → Pages → Deploy from a branch → `main` / root.
 
-- `[EFFECTIVE DATE]` – the date the policy takes effect
-
-Then remove the `.placeholder` highlight style if you like, make the repository public (or use a
-plan that allows Pages on private repositories), and turn on Pages under Settings → Pages →
-Deploy from a branch → `main` / root.
+The app shows the same text in Settings → About (`src/utils/legal.js` in the app's repository):
+change both together.
