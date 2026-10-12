@@ -4,6 +4,9 @@ The Carousel Studio app's legal pages, published with GitHub Pages at https://jw
 
 - `carousel-studio/privacy/` – the privacy policy, https://jwerke.github.io/carousel-studio/privacy/
 - `index.html` – a start page linking to it
+- `assets/` – the shared stylesheet, the app icon and the Inter font (SIL Open Font License, see
+  `assets/fonts/LICENSE-Inter.txt`). Everything is served from this site: no external fonts,
+  scripts or trackers.
 
 No app code lives here.
 
