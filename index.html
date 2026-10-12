@@ -13,7 +13,6 @@
       --muted: #52525b;
       --rule: #e4e4e7;
       --accent: #b45309;
-      --panel: #fafafa;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -22,7 +21,6 @@
         --muted: #a1a1aa;
         --rule: #2e2e33;
         --accent: #ffb900;
-        --panel: #1d1d20;
       }
     }
     * { box-sizing: border-box; }
@@ -30,50 +28,39 @@
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       -webkit-text-size-adjust: 100%;
     }
-    main { max-width: 720px; margin: 0 auto; padding: 56px 24px 72px; }
-    header { margin-bottom: 32px; }
-    .eyebrow { margin: 0 0 6px; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+    main { max-width: 680px; margin: 0 auto; padding: 64px 24px 80px; }
+    header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
     h1 { font-size: 2.25rem; line-height: 1.15; margin: 0; letter-spacing: -0.02em; }
-    .meta { margin: 28px 0 0; padding: 4px 20px; border: 1px solid var(--rule); border-radius: 14px; background: var(--panel); }
-    .meta div { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 12px 0; }
-    .meta div + div { border-top: 1px solid var(--rule); }
-    .meta dt { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-    .meta dd { margin: 0; text-align: right; font-weight: 500; overflow-wrap: anywhere; }
-    /* On a phone, each label sits above its value, so the email address keeps to one line. */
+    .meta { margin: 10px 0 0; color: var(--muted); font-size: 0.9375rem; }
+    .meta span + span::before { content: "·"; margin: 0 8px; }
+    ol.sections { list-style: none; margin: 0; padding: 0; counter-reset: section; }
+    ol.sections > li { counter-increment: section; margin-top: 36px; }
+    /* The number hangs, so a heading that wraps lines up under its own text. */
+    h2 { display: flex; gap: 0.45em; font-size: 1.125rem; line-height: 1.4; margin: 0 0 10px; }
+    h2::before { content: counter(section) "."; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+    p { margin: 0 0 14px; }
+    p:last-child { margin-bottom: 0; }
+    a { color: var(--accent); text-underline-offset: 2px; }
+    .contact { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9375rem; }
+    .contact p { margin: 0 0 4px; }
+    .attribution { margin-top: 24px; color: var(--muted); font-size: 0.8125rem; }
     @media (max-width: 480px) {
       main { padding: 40px 20px 56px; }
       h1 { font-size: 1.875rem; }
-      .meta div { flex-direction: column; gap: 4px; }
-      .meta dd { text-align: left; }
     }
-    .intro { margin: 0 0 8px; }
-    ol.sections { list-style: none; margin: 0; padding: 0; counter-reset: section; }
-    ol.sections > li { counter-increment: section; display: grid; grid-template-columns: 2.25rem 1fr; padding: 24px 0; border-top: 1px solid var(--rule); }
-    ol.sections > li::before { content: counter(section, decimal-leading-zero); font-weight: 700; font-variant-numeric: tabular-nums; color: var(--accent); line-height: 1.45; }
-    h2 { grid-column: 2; font-size: 1.0625rem; line-height: 1.45; margin: 0 0 8px; }
-    ol.sections > li > p { grid-column: 2; }
-    p { margin: 0 0 12px; }
-    p:last-child { margin-bottom: 0; }
-    a { color: var(--accent); }
-    .attribution { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
   </style>
 </head>
 <body>
   <main>
     <header>
-      <p class="eyebrow">Carousel Studio</p>
       <h1>Privacy Policy</h1>
-      <dl class="meta">
-        <div><dt>Effective</dt><dd>October 10, 2026</dd></div>
-        <div><dt>Provider</dt><dd>Jonathan Böhmer</dd></div>
-        <div><dt>Contact</dt><dd><a href="mailto:craftedbyjonathan@gmail.com">craftedbyjonathan@gmail.com</a></dd></div>
-      </dl>
+      <p class="meta"><span>Carousel Studio</span><span>Effective October 10, 2026</span></p>
     </header>
 
-    <p class="intro">This privacy policy applies to the Carousel Studio app for mobile devices, together with any related services operated by Jonathan Böhmer (collectively, the "Application"). Jonathan Böhmer is hereby referred to as the "Service Provider".</p>
+    <p>This privacy policy applies to the Carousel Studio app for mobile devices, together with any related services operated by Jonathan Böhmer (collectively, the "Application"). Jonathan Böhmer is hereby referred to as the "Service Provider".</p>
 
     <ol class="sections">
       <li>
@@ -121,6 +108,10 @@
       </li>
     </ol>
 
+    <footer class="contact">
+      <p>Jonathan Böhmer</p>
+      <p><a href="mailto:craftedbyjonathan@gmail.com">craftedbyjonathan@gmail.com</a></p>
+    </footer>
     <p class="attribution">This privacy policy page was generated by <a href="https://app-privacy-policy-generator.nisrulz.com/" target="_blank" rel="noopener noreferrer">App Privacy Policy Generator</a></p>
   </main>
 </body>
