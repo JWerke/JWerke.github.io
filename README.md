@@ -9,10 +9,8 @@ template fields filled in. It is unchanged otherwise.
 
 ## Before publishing
 
-Replace the highlighted placeholders in `index.html`:
+Replace the highlighted placeholder in `index.html`:
 
-- `[YOUR NAME]` – the developer or publisher name (as shown in the app stores)
-- `[CONTACT EMAIL]` – the address for privacy questions (three places)
 - `[EFFECTIVE DATE]` – the date the policy takes effect
 
 Then remove the `.placeholder` highlight style if you like, make the repository public (or use a
