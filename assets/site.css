@@ -92,9 +92,10 @@ section li::marker { color: var(--accent); }
 p:last-child { margin-bottom: 0; }
 
 .contact-card { margin-top: 48px; padding: 22px 24px; border-radius: 14px; background: var(--surface); border: 1px solid var(--rule); }
-.contact-card h2 { margin: 0 0 6px; color: var(--text); font-size: 1rem; font-weight: 700; }
-.contact-card p { margin: 0; }
-.attribution { margin-top: 28px; color: var(--muted); font-size: 0.8125rem; }
+.contact-card h2 { margin: 0 0 10px; color: var(--text); font-size: 1rem; font-weight: 700; }
+.contact-card .who { margin: 0; color: var(--muted); font-size: 0.9375rem; }
+.contact-card .mail { display: inline-block; margin-top: 2px; font-weight: 600; overflow-wrap: anywhere; }
+.attribution { margin-top: 24px; color: var(--muted); font-size: 0.8125rem; line-height: 1.6; text-wrap: balance; }
 
 /* Footer: the maker's mark */
 .site-footer { border-top: 1px solid var(--rule); }
@@ -131,5 +132,10 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 480px) {
   .site-header .bar, .page, .site-footer .bar, .home { padding-left: 20px; padding-right: 20px; }
   .site-header .section { display: none; }
-  .site-footer .bar { flex-direction: column; align-items: flex-start; }
+  .page { padding-bottom: 56px; }
+  /* Footer on a phone: a centred sign-off – the maker's mark, the copyright, then the links */
+  .site-footer .bar { flex-direction: column-reverse; align-items: center; gap: 18px; padding-top: 32px; padding-bottom: 40px; text-align: center; }
+  .maker { flex-direction: column-reverse; gap: 10px; }
+  .maker svg { height: 40px; }
+  .site-footer nav { gap: 24px; }
 }
